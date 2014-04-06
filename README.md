@@ -5,7 +5,5 @@ triple_boot_mac
 2. 
 
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN
 ```
