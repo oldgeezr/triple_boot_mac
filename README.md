@@ -7,3 +7,6 @@ triple_boot_mac
 ```
 sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN
 ```
+```
+sudo apt-get install bcmwl-kernel-source
+```
