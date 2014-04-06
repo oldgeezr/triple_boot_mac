@@ -1,7 +1,8 @@
 triple_boot_mac
 ===============
 
-Here's an example:
+1. Install OS X on your macbook
+2. 
 
 ```
 function test() {
