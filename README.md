@@ -18,7 +18,15 @@ and replace it with:
 ```
 <key>USBBootSupportedModels</key>
 ```
-This will give you a new option in the Boot Camp Assitant meny and you can make a bootable USB drive. 
+Then type the following commands:
+```
+cd
+sudo codesign -fs - /Applications/Utilities/Boot\ Camp\ Assistant.app/
+```
+Now open Boot Camp Assistant og press Continue. A new option "make bootable Windows USB drive" shoudl now appear in the meny. If not type:
+```
+sudo codesign -fs - /Applications/Utilities/Boot\ Camp\ Assistant.app/Contents/info.plist
+```
 
 3. Use Boot Camp Assistant to generate setup for Windows drivers
 ----------------------------------------------------------------
