@@ -43,15 +43,53 @@ Finish the Boot Camp Assistant guide.
 After making a bootable USB drive you would also use Boot Camp Assistant to generate drivers for your new Windows. 
 Open Boot Camp Assistant -> press Continue -> press Downlad the newest Windows support software
 
-4. Install bootloader
+4. Install Windows
+------------------
 
+Restart your Macbook and hold the "alt" key at start up. The boot partions on the Macbook will appear. Then boot from the "EFI boot" to install Windows from USB drive. 
+
+5. Make a bootable Linux Mint USB drive
+
+Go to (http://www.linuxmint.com/download.php) and download the linux.iso with MATE desktop for 64-bit.
+
+Now that you have the .iso file open terminal and type:
 ```
-sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN
+diskutil list
+``` 
+This will list the volumes on the Macbook. Now find a USB drive and put in the USB. Type:
 ```
-```
-sudo apt-get install bcmwl-kernel-source
-```
+diskutil list
+``` 
+again and note the name of the USB drive you just attached. (example: disk2). It's important the you get the right volume or you will end up deleting the wrong volume. When you are certain that you have the right name, create a .img file from the .iso file with the commands:
 ```
 hdiutil convert -format UDRW -o /path/to/image.img /path/to/isofile.iso
 ```
-cd ../../Applications/Utilities/Boot\ Camp\ Assistant.app/Contents/
+This will generate a .img.dmg file. Just delete the .dmg from the filename and the .img file is ready.
+Now you want to make a bootable device. Type in:
+```
+sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN
+```
+This will take a while... When this is done, repeat point 4 to install Linux Mint. 
+
+6. Installing Linux Mint
+-------------------------
+
+Installing Linux Mint is different from installing Windows. 
+When the installation guide gives you the option on how to install Linux you choose the "Advanced" option. 
+You will be presented with a list of the partitons on your Macbook. Choose the right partition and generate a ROOT, SWAP and a HOME directory. The ROOT partition should be 10-20 GB, the SWAP environment should be twice the size of the RAM installed and the HOME is the amaount of space you want for the Linux partition. 
+
+7. Installing Wireless drivers for Linux
+----------------------------------------
+
+Connect the Macbook to internett by cable or a USB device that will give you access to internet.
+
+Go to terminal and type in:
+```
+sudo apt-get update
+sudo apt-get --reinstall install bcmwl-kernel-source
+``` 
+You should have wireless connection by now.
+
+References:
+-----------
+- Boot Camp Assitant option: (https://www.youtube.com/watch?v=VBAQ3CNgfxc)
