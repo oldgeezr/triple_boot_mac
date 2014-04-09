@@ -1,8 +1,16 @@
 triple_boot_mac
 ===============
 
-1. Make a bootable Windows USB drive
+1. Install the rEFIt boot menu
+------------------------------
+
+Go to: (http://refit.sourceforge.net/)
+and download and install the boot menu.
+
+2. Make a bootable Windows USB drive
 ------------------------------------
+In this section we enable the option to make a bootable Windows USB drive in the Boot Camp Assistant.
+
 Open Terminal and type in the follwoing commands:
 ```
 cd 
@@ -23,13 +31,15 @@ Then type the following commands:
 cd
 sudo codesign -fs - /Applications/Utilities/Boot\ Camp\ Assistant.app/
 ```
-Now open Boot Camp Assistant og press Continue. A new option "make bootable Windows USB drive" shoudl now appear in the meny. If not type:
+Now open Boot Camp Assistant og press Continue. A new option "make bootable Windows USB drive" should now appear in the menu. If not, try:
 ```
 sudo codesign -fs - /Applications/Utilities/Boot\ Camp\ Assistant.app/Contents/info.plist
 ```
+Finish the Boot Camp Assistant guide.
 
 3. Use Boot Camp Assistant to generate setup for Windows drivers
 ----------------------------------------------------------------
+
 After making a bootable USB drive you would also use Boot Camp Assistant to generate drivers for your new Windows. 
 Open Boot Camp Assistant -> press Continue -> press Downlad the newest Windows support software
 
