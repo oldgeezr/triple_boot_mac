@@ -4,8 +4,15 @@ triple_boot_mac
 ## Table of contents
 
 - [Install rEFIt Boot Menu](Install-rEFIt-Boot-Menu)
+- [Make a bootable Windows USB drive](Make-a-bootable-Windows-USB-drive)
+- [Generate setup for Windows drivers](Generate-setup-for-Windows-drivers)
+- [Install Windows](Install-Windows)
+- [Make a bootable Linux Mint USB drive](Make-a-bootable-Linux-Mint-USB-drive)
+- [Install Linux Mint](Install-Linux-Mint)
+- [Install Wireless drivers for Linux](Install-Wireless-drivers-for-Linux)
 
 1. Install rEFIt Boot Menu
+--------------------------
 
 Download the [rEFIt Boot Menu](http://refit.sourceforge.net/) and install.
 
