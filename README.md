@@ -4,8 +4,7 @@ triple_boot_mac
 1. Install the rEFIt boot menu
 ------------------------------
 
-Go to: (http://refit.sourceforge.net/)
-and download and install the boot menu.
+Download the [rEFIt Boot Menu](http://refit.sourceforge.net/) and install.
 
 2. Make a bootable Windows USB drive
 ------------------------------------
