@@ -1,8 +1,12 @@
 triple_boot_mac
 ===============
 
-1. Install the rEFIt boot menu
-------------------------------
+## Table of contents
+
+- [Install rEFIt Boot Menu](Install-rEFIt-Boot-Menu)
+
+1. Install rEFIt Boot Menu
+--------------------------
 
 Download the [rEFIt Boot Menu](http://refit.sourceforge.net/) and install.
 
@@ -31,7 +35,7 @@ sudo codesign -fs - /Applications/Utilities/Boot\ Camp\ Assistant.app/Contents/i
 Finish the Boot Camp Assistant guide.
 
 3. Generate setup for Windows drivers
-----------------------------------------------------------------
+-------------------------------------
 
 After making a bootable USB drive you would also use Boot Camp Assistant to generate drivers for your new Windows. 
 Open Boot Camp Assistant -> press Continue -> press Download the newest Windows support software
@@ -52,15 +56,15 @@ This will generate a .img.dmg file. Just delete the .dmg from the filename and t
 Now you want to make a bootable device. Type in `sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN`.
 This will take a while... When this is done, repeat point 4 to install Linux Mint. 
 
-6. Installing Linux Mint
--------------------------
+6. Install Linux Mint
+---------------------
 
 Installing Linux Mint is different from installing Windows. 
 When the installation guide gives you the option on how to install Linux you choose the "Advanced" option. 
 You will be presented with a list of the partitons on your Macbook. Choose the right partition and generate a ROOT, SWAP and a HOME directory. The ROOT partition should be 10-20 GB, the SWAP environment should be twice the size of the RAM installed and the HOME is the amaount of space you want for the Linux partition. 
 
-7. Installing Wireless drivers for Linux
-----------------------------------------
+7. Install Wireless drivers for Linux
+-------------------------------------
 
 Connect the Macbook to internett by cable or a USB device that will give you access to internet.
 
@@ -73,4 +77,4 @@ You should have wireless connection by now.
 
 References:
 -----------
-- Boot Camp Assitant option: (https://www.youtube.com/watch?v=VBAQ3CNgfxc)
+- [Boot Camp Assitant option](https://www.youtube.com/watch?v=VBAQ3CNgfxc)
