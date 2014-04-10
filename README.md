@@ -6,7 +6,6 @@ triple_boot_mac
 - [Install rEFIt Boot Menu](Install-rEFIt-Boot-Menu)
 
 1. Install rEFIt Boot Menu
---------------------------
 
 Download the [rEFIt Boot Menu](http://refit.sourceforge.net/) and install.
 
