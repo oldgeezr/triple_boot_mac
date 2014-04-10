@@ -17,15 +17,9 @@ cd ../../Applications/Utilities/Boot\ Camp\ Assistant.app/Contents/
 sudo cp info.plist ../info.plist
 sudo vim info.plist
 ```
-Scroll down to the line:
-```
-<key>PreUSBBootSupportedModels</key>
-```
-and replace it with:
-```
-<key>USBBootSupportedModels</key>
-```
-Then type the following commands:
+Scroll down to the line `<key>PreUSBBootSupportedModels</key>`
+and replace it with `<key>USBBootSupportedModels</key>`
+Save the file by typing `:wq` and type the following commands in Terminal to relace with the new file:
 ```
 cd
 sudo codesign -fs - /Applications/Utilities/Boot\ Camp\ Assistant.app/
@@ -51,23 +45,11 @@ Restart your Macbook and hold the "alt" key at start up. The boot partions on th
 
 Go to (http://www.linuxmint.com/download.php) and download the linux.iso with MATE desktop for 64-bit.
 
-Now that you have the .iso file open terminal and type:
-```
-diskutil list
-``` 
-This will list the volumes on the Macbook. Now find a USB drive and put in the USB. Type:
-```
-diskutil list
-``` 
-again and note the name of the USB drive you just attached. (example: disk2). It's important the you get the right volume or you will end up deleting the wrong volume. When you are certain that you have the right name, create a .img file from the .iso file with the commands:
-```
-hdiutil convert -format UDRW -o /path/to/image.img /path/to/isofile.iso
-```
+Now that you have the .iso file open terminal and type `diskutil list` 
+This will list the volumes on the Macbook. Now find a USB drive and put in the USB. Type `diskutil list` 
+again and note the name of the USB drive you just attached. (example: disk2). It's important the you get the right volume or you will end up deleting the wrong volume. When you are certain that you have the right name, create a .img file from the .iso file with the commands `hdiutil convert -format UDRW -o /path/to/image.img /path/to/isofile.iso`
 This will generate a .img.dmg file. Just delete the .dmg from the filename and the .img file is ready.
-Now you want to make a bootable device. Type in:
-```
-sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN
-```
+Now you want to make a bootable device. Type in `sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN`.
 This will take a while... When this is done, repeat point 4 to install Linux Mint. 
 
 6. Installing Linux Mint
