@@ -30,11 +30,11 @@ sudo codesign -fs - /Applications/Utilities/Boot\ Camp\ Assistant.app/Contents/i
 ```
 Finish the Boot Camp Assistant guide.
 
-3. Use Boot Camp Assistant to generate setup for Windows drivers
+3. Generate setup for Windows drivers
 ----------------------------------------------------------------
 
 After making a bootable USB drive you would also use Boot Camp Assistant to generate drivers for your new Windows. 
-Open Boot Camp Assistant -> press Continue -> press Downlad the newest Windows support software
+Open Boot Camp Assistant -> press Continue -> press Download the newest Windows support software
 
 4. Install Windows
 ------------------
