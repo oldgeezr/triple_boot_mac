@@ -52,6 +52,7 @@ Open Boot Camp Assistant -> press Continue -> press Download the newest Windows 
 Restart your Macbook and hold the "alt" key at start up. The boot partions on the Macbook will appear. Then boot from the "EFI boot" to install Windows from USB drive. 
 
 5. Make a bootable Linux Mint USB drive
+---------------------------------------
 
 Go to (http://www.linuxmint.com/download.php) and download the linux.iso with MATE desktop for 64-bit.
 
