@@ -60,7 +60,7 @@ Now that you have the .iso file open terminal and type `diskutil list`
 This will list the volumes on the Macbook. Now find a USB drive and put in the USB. Type `diskutil list` 
 again and note the name of the USB drive you just attached. (example: disk2). It's important the you get the right volume or you will end up deleting the wrong volume. When you are certain that you have the right name, create a .img file from the .iso file with the commands `hdiutil convert -format UDRW -o /path/to/image.img /path/to/isofile.iso`
 This will generate a .img.dmg file. Just delete the .dmg from the filename and the .img file is ready.
-Now you want to make a bootable device. Type in `sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN`.
+Now you want to make a bootable device. First you have to unmount the desired device by typing `diskutil unmountDisk /dev/diskN`, then type `sudo dd bs=1m if=/path/to/image.img of=/dev/rdiskN`.
 This will take a while... When this is done, repeat point 4 to install Linux Mint. 
 
 6. Install Linux Mint
