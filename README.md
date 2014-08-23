@@ -73,7 +73,7 @@ You will be presented with a list of the partitons on your Macbook. Choose the r
 7. Install Wireless drivers for Linux
 -------------------------------------
 
-Connect the Macbook to internett by cable or a USB device that will give you access to internet.
+Connect the Macbook to internet by cable or a USB device that will give you access to internet.
 
 Go to terminal and type in:
 ```
