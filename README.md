@@ -68,7 +68,7 @@ This will take a while... When this is done, repeat point 4 to install Linux Min
 
 Installing Linux Mint is different from installing Windows. 
 When the installation guide gives you the option on how to install Linux you choose the "Advanced" option. 
-You will be presented with a list of the partitons on your Macbook. Choose the right partition and generate a ROOT, SWAP and a HOME directory. The ROOT partition should be 10-20 GB, the SWAP environment should be twice the size of the RAM installed and the HOME is the amaount of space you want for the Linux partition. 
+You will be presented with a list of the partitons on your Macbook. Choose the right partition and generate a ROOT, SWAP and a HOME directory. The ROOT partition should be 10-20 GB, the SWAP environment should be twice the size of the RAM installed and the HOME is the amount of space you want for the Linux partition. 
 
 7. Install Wireless drivers for Linux
 -------------------------------------
