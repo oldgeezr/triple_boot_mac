@@ -10,6 +10,7 @@ triple_boot_mac
 - [Make a bootable Linux Mint USB drive](#Make-a-bootable-Linux-Mint-USB-drive)
 - [Install Linux Mint](#Install-Linux-Mint)
 - [Install Wireless drivers for Linux](#Install-Wireless-drivers-for-Linux)
+- [Enable WiFi for Ubuntu Server](enable-wiFi-for-ubuntu-server)
 
 1. Install rEFIt Boot Menu
 --------------------------
@@ -81,6 +82,17 @@ sudo apt-get update
 sudo apt-get --reinstall install bcmwl-kernel-source
 ``` 
 You should have wireless connection by now.
+
+8. Enable WiFi for Ubuntu Server
+-------------------------------------
+
+I had some trouble enabling Wifi on my server and found a command to enable the network card:
+`sudo ifconfig wlp9s0 up` 
+
+`wlp9s0` is the name of the WLAN card. List network HW by the command:
+`sudo lshw -C network`
+
+If the HW is marked DISABELED, run the above command
 
 References:
 -----------
