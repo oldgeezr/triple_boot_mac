@@ -86,13 +86,19 @@ You should have wireless connection by now.
 8. Enable WiFi for Ubuntu Server
 -------------------------------------
 
-I had some trouble enabling Wifi on my server and found a command to enable the network card:
-`sudo ifconfig wlp9s0 up` 
+Had some serious trouble enabling Wifi for my Ubuntu server, however here is what I think fixed the problem:
 
-`wlp9s0` is the name of the WLAN card. List network HW by the command:
-`sudo lshw -C network`
-
-If the HW is marked DISABELED, run the above command
+Add these lines to the /etc/network/interfaces file
+```
+auto wlan0
+iface wlan0 inet static
+address 192.168.1.150
+netmask 255.255.255.0
+gateway 192.168.1.1
+wpa-ssid <your_router>
+wpa-psk <your_wpa_key>
+```
+Then type `sudo ifdown wlp9s0 && ifup wlp9s0` in the command line. Should work!
 
 References:
 -----------
